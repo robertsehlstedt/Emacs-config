@@ -1,0 +1,5 @@
+This is my personal *Emacs configuration*. It is subject to constant change as it is a work in progress.
+
+* How to use it?
+  Pull the files into your ~/.emacs.d/ directory, then restart emacs.
+  It should download all of the relevant packages after the first startup.
