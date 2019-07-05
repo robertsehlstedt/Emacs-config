@@ -24,7 +24,7 @@
    When moving the cursor past the end of the screen, it will now
    scroll the page line by line.
    #+BEGIN_SRC emacs-lisp
-     (setq scroll-conservatively 100)
+     ;(setq scroll-conservatively 100)
    #+END_SRC
 ** Disable ring bell
    #+BEGIN_SRC emacs-lisp
@@ -141,14 +141,6 @@
        (kill-word 1))
      (global-set-key (kbd "C-c w w") 'kill-whole-word)
    #+END_SRC
-** Hungry delete
-   Whenever pressing backspace, will delete
-   until the first known non-whitespace character
-   #+BEGIN_SRC emacs-lisp
-     (use-package hungry-delete
-       :ensure t
-       :config (global-hungry-delete-mode))
-   #+END_SRC
 * Packages
 ** which-key
    When doing C-x, C-c or any other C- modifier,
@@ -193,24 +185,6 @@
 	 :ensure t
 	 :bind
 	 ("M-s" . avy-goto-char))
-   #+END_SRC
-** Rainbow
-   Rainbow mode, hexadecimal values will take
-   their corresponding color
-   #+BEGIN_SRC emacs-lisp
-     (use-package rainbow-mode
-	 :ensure t
-	 :init
-	 :hook 'prog-mode 'rainbow-mode
-       )
-   #+END_SRC
-
-   Delimiters like (), [], {} will have matching color
-   #+BEGIN_SRC emacs-lisp
-     (use-package rainbow-delimiters
-       :ensure t
-       :init
-       (rainbow-delimiters-mode 1))
    #+END_SRC
 ** Switch-window
    When having more than 2 windows open, using C-x o
